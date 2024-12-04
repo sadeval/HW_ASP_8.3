@@ -1,0 +1,45 @@
+﻿@model Appointment
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Запись на прием</title>
+</head>
+<body>
+    <h1>Запись на прием</h1>
+
+    <form method="post" asp-action="Submit">
+        <div>
+            <label>Имя:</label>
+            <input type="text" asp-for="UserName" />
+            <span style="color:red;" asp-validation-for="UserName"></span>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" asp-for="Email" />
+            <span style="color:red;" asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label>Телефон:</label>
+            <input type="tel" asp-for="Phone" />
+            <span style="color:red;" asp-validation-for="Phone"></span>
+        </div>
+        <div>
+            <label>Причина:</label>
+            <textarea asp-for="Reason"></textarea>
+            <span style="color:red;" asp-validation-for="Reason"></span>
+        </div>
+        <div>
+            <label>Дата приема:</label>
+            <input type="date" asp-for="AppointmentDate" />
+            <span style="color:red;" asp-validation-for="AppointmentDate"></span>
+        </div>
+        <div>
+            <label>Время приема:</label>
+            <input type="time" asp-for="AppointmentTime" />
+            <span style="color:red;" asp-validation-for="AppointmentTime"></span>
+        </div>
+        <button type="submit">Записаться</button>
+    </form>
+</body>
+</html>

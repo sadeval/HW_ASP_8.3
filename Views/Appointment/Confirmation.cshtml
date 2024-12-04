@@ -1,0 +1,18 @@
+﻿@model Appointment
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Подтверждение записи</title>
+</head>
+<body>
+    <h1>Подтверждение записи</h1>
+    <p>Спасибо, @Model.UserName, за запись на прием.</p>
+    <p><strong>Дата:</strong> @Model.AppointmentDate.ToString("dd.MM.yyyy")</p>
+    <p><strong>Время:</strong> @Model.AppointmentTime.ToString(@"hh\:mm")</p>
+    <p><strong>Причина:</strong> @Model.Reason</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Телефон:</strong> @Model.Phone</p>
+    <a href="/Appointment/Index">Вернуться к записи</a>
+</body>
+</html>
